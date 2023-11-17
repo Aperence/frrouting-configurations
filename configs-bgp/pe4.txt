@@ -33,9 +33,18 @@ exit
 !
 router bgp 64000
  neighbor 10.100.0.1 remote-as 64004
- neighbor fc00::20 remote-as 64000
- neighbor fc00::20 update-source lo
- neighbor fc00::20 next-hop-self
+ neighbor fc00::1 remote-as 64000
+ neighbor fc00::1 update-source lo
+ neighbor fc00::1 next-hop-self
+ neighbor fc00::2 remote-as 64000
+ neighbor fc00::2 update-source lo
+ neighbor fc00::2 next-hop-self
+ neighbor fc00::3 remote-as 64000
+ neighbor fc00::3 update-source lo
+ neighbor fc00::3 next-hop-self
+ neighbor fc00::10 remote-as 64000
+ neighbor fc00::10 update-source lo
+ neighbor fc00::10 next-hop-self
  !
  address-family ipv4 unicast
   neighbor 10.100.0.1 route-map ACCEPT in

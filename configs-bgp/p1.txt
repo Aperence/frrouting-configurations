@@ -46,7 +46,18 @@ interface eth5
 exit
 !
 router bgp 64000
- neighbor fc00::20 remote-as 64000
+ neighbor fc00::1 remote-as 64000
+ neighbor fc00::1 update-source lo
+ neighbor fc00::1 next-hop-self
+ neighbor fc00::2 remote-as 64000
+ neighbor fc00::2 update-source lo
+ neighbor fc00::2 next-hop-self
+ neighbor fc00::3 remote-as 64000
+ neighbor fc00::3 update-source lo
+ neighbor fc00::3 next-hop-self
+ neighbor fc00::4 remote-as 64000
+ neighbor fc00::4 update-source lo
+ neighbor fc00::4 next-hop-self
 exit
 !
 router isis ISP

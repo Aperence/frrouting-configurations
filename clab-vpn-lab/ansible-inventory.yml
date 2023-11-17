@@ -8,22 +8,22 @@ all:
     linux:
       hosts:
         clab-vpn-lab-ce1-1:
-          ansible_host: 172.20.20.19
-        clab-vpn-lab-ce1-2:
-          ansible_host: 172.20.20.10
-        clab-vpn-lab-ce2-1:
-          ansible_host: 172.20.20.8
-        clab-vpn-lab-ce2-2:
-          ansible_host: 172.20.20.3
-        clab-vpn-lab-p1:
-          ansible_host: 172.20.20.11
-        clab-vpn-lab-pe1:
-          ansible_host: 172.20.20.18
-        clab-vpn-lab-pe2:
-          ansible_host: 172.20.20.23
-        clab-vpn-lab-pe3:
           ansible_host: 172.20.20.7
-        clab-vpn-lab-pe4:
+        clab-vpn-lab-ce1-2:
+          ansible_host: 172.20.20.23
+        clab-vpn-lab-ce2-1:
+          ansible_host: 172.20.20.19
+        clab-vpn-lab-ce2-2:
+          ansible_host: 172.20.20.11
+        clab-vpn-lab-p1:
           ansible_host: 172.20.20.12
-        clab-vpn-lab-rr:
+        clab-vpn-lab-pe1:
+          ansible_host: 172.20.20.10
+        clab-vpn-lab-pe2:
+          ansible_host: 172.20.20.18
+        clab-vpn-lab-pe3:
           ansible_host: 172.20.20.17
+        clab-vpn-lab-pe4:
+          ansible_host: 172.20.20.3
+        clab-vpn-lab-rr:
+          ansible_host: 172.20.20.8
