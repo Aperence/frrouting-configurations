@@ -1,0 +1,439 @@
+{
+  "name": "vpn-lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-8683be15254a",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "ce1-1": {
+      "index": "0",
+      "shortname": "ce1-1",
+      "longname": "clab-vpn-lab-ce1-1",
+      "fqdn": "ce1-1.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce1-1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.19",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::13",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce1-1",
+        "clab-node-name": "ce1-1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce1-2": {
+      "index": "1",
+      "shortname": "ce1-2",
+      "longname": "clab-vpn-lab-ce1-2",
+      "fqdn": "ce1-2.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce1-2",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::a",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce1-2",
+        "clab-node-name": "ce1-2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2-1": {
+      "index": "2",
+      "shortname": "ce2-1",
+      "longname": "clab-vpn-lab-ce2-1",
+      "fqdn": "ce2-1.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce2-1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::8",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce2-1",
+        "clab-node-name": "ce2-1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "ce2-2": {
+      "index": "3",
+      "shortname": "ce2-2",
+      "longname": "clab-vpn-lab-ce2-2",
+      "fqdn": "ce2-2.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce2-2",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/ce2-2",
+        "clab-node-name": "ce2-2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "p1": {
+      "index": "4",
+      "shortname": "p1",
+      "longname": "clab-vpn-lab-p1",
+      "fqdn": "p1.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/p1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::b",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/p1",
+        "clab-node-name": "p1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe1": {
+      "index": "5",
+      "shortname": "pe1",
+      "longname": "clab-vpn-lab-pe1",
+      "fqdn": "pe1.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe1",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.18",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::12",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe1",
+        "clab-node-name": "pe1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe2": {
+      "index": "6",
+      "shortname": "pe2",
+      "longname": "clab-vpn-lab-pe2",
+      "fqdn": "pe2.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe2",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.23",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::17",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe2",
+        "clab-node-name": "pe2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe3": {
+      "index": "7",
+      "shortname": "pe3",
+      "longname": "clab-vpn-lab-pe3",
+      "fqdn": "pe3.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe3",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe3",
+        "clab-node-name": "pe3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "pe4": {
+      "index": "8",
+      "shortname": "pe4",
+      "longname": "clab-vpn-lab-pe4",
+      "fqdn": "pe4.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe4",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::c",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/pe4",
+        "clab-node-name": "pe4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "rr": {
+      "index": "9",
+      "shortname": "rr",
+      "longname": "clab-vpn-lab-rr",
+      "fqdn": "rr.vpn-lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/rr",
+      "kind": "linux",
+      "image": "frrouting/frr",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.17",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::11",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-8683be15254a",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/vpn/clab-vpn-lab/rr",
+        "clab-node-name": "rr",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/vpn/vpn.clab.yml",
+        "containerlab": "vpn-lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "ce1-1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:d4:44:e2",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:30:9b:43",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce1-2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f6:68:88",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:61:73:aa",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2-1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:5c:4f:ba",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe3",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:b3:5a:ad",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "ce2-2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:f6:37:4b",
+        "peer": "z"
+      },
+      "z": {
+        "node": "pe4",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:21:ca:43",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:7f:f6:2d",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:a1:76:6c",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:67:6a:bd",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a8:f0:47",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:a1:d7:32",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:2b:e2:70",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "pe4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:e4:c0:2f",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:31:45:ac",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "rr",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:e5:65:e6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "p1",
+        "interface": "eth5",
+        "mac": "aa:c1:ab:e1:f3:6d",
+        "peer": "a"
+      }
+    }
+  ]
+}

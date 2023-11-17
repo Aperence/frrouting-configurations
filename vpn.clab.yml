@@ -1,0 +1,149 @@
+name: vpn-lab
+topology:
+  nodes:
+    ce1-1:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/ce1-1.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    ce1-2:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/ce1-2.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    ce2-1:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/ce2-1.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    ce2-2:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/ce2-2.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    pe1:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/pe1.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    pe2:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/pe2.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    pe3:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/pe3.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    pe4:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/pe4.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    p1:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/p1.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+    rr:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/rr.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
+  links:
+    - endpoints:
+      - ce1-1:eth1
+      - pe1:eth1
+
+    - endpoints:
+      - ce1-2:eth1
+      - pe2:eth1
+    
+    - endpoints:
+      - ce2-1:eth1
+      - pe3:eth1
+    
+    - endpoints:
+      - ce2-2:eth1
+      - pe4:eth1
+    
+    - endpoints:
+      - pe1:eth2
+      - p1:eth1
+
+    - endpoints:
+      - pe2:eth2
+      - p1:eth2
+
+    - endpoints:
+      - pe3:eth2
+      - p1:eth3
+
+    - endpoints:
+      - pe4:eth2
+      - p1:eth4
+
+    - endpoints:
+      - rr:eth1
+      - p1:eth5
