@@ -1,0 +1,31 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname pe1
+!
+ip route 10.255.0.0/16 Null0
+!
+interface lo
+ ip address 10.255.0.1/32
+ ip router isis ISP
+ ipv6 address fc00::1/128
+ ipv6 router isis ISP
+exit
+!
+interface eth1
+ ip address 10.100.0.2/24
+exit
+!
+interface eth2
+ ipv6 router isis ISP
+ ip router isis ISP
+ ip address 10.101.0.2/24
+ isis network point-to-point
+exit
+!
+router isis ISP
+ is-type level-1
+ net 49.0000.0000.0000.0001.00
+exit
+!
+end

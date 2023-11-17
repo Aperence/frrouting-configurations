@@ -1,0 +1,16 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname ce1-1
+!
+ip route 10.1.0.0/16 Null0
+!
+interface lo
+ ipv6 address fc01::1/128
+ ip address 10.1.0.1/32
+exit
+interface eth1
+ ip address 10.100.0.1/24
+exit
+!
+end
