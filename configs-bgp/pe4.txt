@@ -23,6 +23,10 @@ interface eth2
  isis network point-to-point
 exit
 !
+interface eth3
+ ip address 10.100.1.2/24
+exit
+!
 router isis ISP
  is-type level-1
  net 49.0000.0000.0000.0004.00
@@ -33,6 +37,7 @@ exit
 !
 router bgp 64000
  neighbor 10.100.0.1 remote-as 64004
+ neighbor 10.100.1.1 remote-as 64005
  neighbor fc00::1 remote-as 64000
  neighbor fc00::1 update-source lo
  neighbor fc00::1 next-hop-self
@@ -49,6 +54,8 @@ router bgp 64000
  address-family ipv4 unicast
   neighbor 10.100.0.1 route-map ACCEPT in
   neighbor 10.100.0.1 route-map ACCEPT out
+  neighbor 10.100.1.1 route-map ACCEPT in
+  neighbor 10.100.1.1 route-map ACCEPT out
   network 10.255.0.0/16
  exit-address-family
 exit

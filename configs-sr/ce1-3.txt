@@ -1,0 +1,30 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname ce1-3
+!
+ip route 10.5.0.0/16 Null0
+!
+interface lo
+ ipv6 address fc05::1/128
+ ip address 10.5.0.1/32
+exit
+!
+interface eth1
+ ip address 10.100.1.1/24
+exit
+!
+route-map ACCEPT permit 10
+exit
+!
+router bgp 64005
+ neighbor 10.100.1.2 remote-as 64000
+ neighbor 10.100.1.2 route-map ACCEPT in
+ neighbor 10.100.1.2 route-map ACCEPT out
+ !
+ address-family ipv4 unicast
+  network 10.5.0.0/16
+ exit-address-family
+exit
+!
+end

@@ -23,6 +23,10 @@ interface eth2
  isis network point-to-point
 exit
 !
+interface eth3
+ ip address 10.100.1.2/24
+exit
+!
 router isis ISP
  is-type level-1
  net 49.0000.0000.0000.0004.00

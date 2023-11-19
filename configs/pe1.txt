@@ -5,6 +5,8 @@ hostname pe1
 !
 ip route 10.255.0.0/16 Null0
 !
+vrf Blue
+!
 interface lo
  ip address 10.255.0.1/32
  ip router isis ISP
@@ -36,6 +38,16 @@ router bgp 64000
   neighbor 10.100.0.1 route-map ACCEPT in
   neighbor 10.100.0.1 route-map ACCEPT out
   network 10.255.0.0/16
+ exit-address-family
+exit
+!
+router bgp 64000 vrf Blue
+ address-family ipv4 unicast
+  redistribute connected
+  rt vpn both 64000:1
+  rd vpn export 64000:1
+  export vpn
+  import vpn
  exit-address-family
 exit
 !

@@ -45,6 +45,17 @@ topology:
       image: frrouting/frr
       kind: linux
 
+    ce1-3:
+      binds:
+      - frr_conf:/etc/frr/daemons
+      - configs/ce1-3.txt:/conf.txt
+      - setup.sh:/setup.sh
+      exec:
+      - chmod +x setup.sh
+      - sh ./setup.sh
+      image: frrouting/frr
+      kind: linux
+
     pe1:
       binds:
       - frr_conf:/etc/frr/daemons
@@ -147,3 +158,7 @@ topology:
     - endpoints:
       - rr:eth1
       - p1:eth5
+
+    - endpoints:
+      - ce1-3:eth1
+      - pe4:eth3
