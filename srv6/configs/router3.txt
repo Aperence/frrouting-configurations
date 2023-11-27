@@ -1,0 +1,53 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname router3
+ipv6 forwarding
+!
+segment-routing
+ srv6
+  locators
+   locator loc3
+    prefix fc00:3::/48
+   exit
+   !
+  exit
+  !
+ exit
+ !
+exit
+!
+interface lo
+ ipv6 router isis 1
+ ipv6 address fc00::3/128
+exit
+!
+interface eth2
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+exit
+!
+interface eth3
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+exit
+!
+interface eth4
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+exit
+!
+router isis 1
+ is-type level-1
+ net 49.0000.0000.0000.0003.00
+ topology ipv6-unicast
+ segment-routing srv6
+  locator loc3
+ exit
+ !
+exit
+!
+end

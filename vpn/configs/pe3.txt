@@ -1,17 +1,17 @@
 !
 frr version 9.2-dev
 frr defaults traditional
-hostname pe1
+hostname pe3
 !
 ip route 10.255.0.0/16 Null0
 !
 vrf Blue
 !
 interface lo
- ip address 10.255.0.1/32
  ip router isis ISP
- ipv6 address fc00::1/128
  ipv6 router isis ISP
+ ip address 10.255.0.3/32
+ ipv6 address fc00::3/128
 exit
 !
 interface eth1
@@ -21,43 +21,39 @@ exit
 interface eth2
  ipv6 router isis ISP
  ip router isis ISP
- ip address 10.101.0.2/24
+ ip address 10.103.0.2/24
  isis network point-to-point
+exit
+!
+router isis ISP
+ is-type level-1
+ net 49.0000.0000.0000.0003.00
+ segment-routing on
+ segment-routing node-msd 8
+ segment-routing prefix 10.255.0.3/32 index 103
 exit
 !
 route-map ACCEPT permit 10
 exit
 !
 router bgp 64000
- neighbor 10.100.0.1 remote-as 64001
  neighbor fc00::20 remote-as 64000
  neighbor fc00::20 update-source lo
  neighbor fc00::20 next-hop-self
- !
  address-family ipv4 unicast
-  neighbor 10.100.0.1 route-map ACCEPT in
-  neighbor 10.100.0.1 route-map ACCEPT out
   network 10.255.0.0/16
  exit-address-family
 exit
-!
 router bgp 64000 vrf Blue
+ neighbor 10.100.0.1 remote-as 64003
  address-family ipv4 unicast
   redistribute connected
   rt vpn both 64000:1
   rd vpn export 64000:1
-  export vpn
-  import vpn
+  import vrf default
+  neighbor 10.100.0.1 route-map ACCEPT in
+  neighbor 10.100.0.1 route-map ACCEPT out
  exit-address-family
-exit
-!
-router isis ISP
- is-type level-1
- net 49.0000.0000.0000.0001.00
- segment-routing on
- segment-routing node-msd 8
- segment-routing prefix fc00::1/128 index 1
- segment-routing prefix 10.255.0.1/32 index 101
 exit
 !
 end

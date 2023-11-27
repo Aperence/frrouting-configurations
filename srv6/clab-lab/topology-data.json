@@ -1,0 +1,252 @@
+{
+  "name": "lab",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-d8d2fb9dd849",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "2001:172:20:20::/64",
+        "ipv6-gw": "2001:172:20:20::1",
+        "mtu": "1500",
+        "external-access": true
+      }
+    }
+  },
+  "nodes": {
+    "router1": {
+      "index": "0",
+      "shortname": "router1",
+      "longname": "clab-lab-router1",
+      "fqdn": "router1.lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router1",
+      "kind": "linux",
+      "image": "registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d8d2fb9dd849",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router1",
+        "clab-node-name": "router1",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/srv6/srv6.clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router2": {
+      "index": "1",
+      "shortname": "router2",
+      "longname": "clab-lab-router2",
+      "fqdn": "router2.lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router2",
+      "kind": "linux",
+      "image": "registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d8d2fb9dd849",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router2",
+        "clab-node-name": "router2",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/srv6/srv6.clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router3": {
+      "index": "2",
+      "shortname": "router3",
+      "longname": "clab-lab-router3",
+      "fqdn": "router3.lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router3",
+      "kind": "linux",
+      "image": "registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d8d2fb9dd849",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router3",
+        "clab-node-name": "router3",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/srv6/srv6.clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router4": {
+      "index": "3",
+      "shortname": "router4",
+      "longname": "clab-lab-router4",
+      "fqdn": "router4.lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router4",
+      "kind": "linux",
+      "image": "registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d8d2fb9dd849",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router4",
+        "clab-node-name": "router4",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/srv6/srv6.clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    },
+    "router5": {
+      "index": "4",
+      "shortname": "router5",
+      "longname": "clab-lab-router5",
+      "fqdn": "router5.lab.io",
+      "group": "",
+      "labdir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router5",
+      "kind": "linux",
+      "image": "registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "2001:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d8d2fb9dd849",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/srv6/clab-lab/router5",
+        "clab-node-name": "router5",
+        "clab-node-type": "",
+        "clab-topo-file": "/home/aperence/Documents/master/m1/reseau2/srv6/srv6.clab.yml",
+        "containerlab": "lab"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "a": {
+        "node": "router1",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:19:e3:b6",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router2",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:12:95:bb",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router2",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:dd:36:28",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router5",
+        "interface": "eth1",
+        "mac": "aa:c1:ab:12:7b:5b",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router3",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:72:3d:fd",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router5",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:ec:1b:05",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router4",
+        "interface": "eth2",
+        "mac": "aa:c1:ab:85:c7:01",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router5",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:79:6e:e2",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router2",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:5d:2a:57",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router3",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:06:04:2d",
+        "peer": "a"
+      }
+    },
+    {
+      "a": {
+        "node": "router3",
+        "interface": "eth4",
+        "mac": "aa:c1:ab:b5:e7:31",
+        "peer": "z"
+      },
+      "z": {
+        "node": "router4",
+        "interface": "eth3",
+        "mac": "aa:c1:ab:89:6b:53",
+        "peer": "a"
+      }
+    }
+  ]
+}

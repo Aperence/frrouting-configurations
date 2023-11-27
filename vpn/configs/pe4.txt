@@ -7,6 +7,8 @@ ip route 10.255.0.0/16 Null0
 !
 vrf Red
 !
+vrf Blue
+!
 interface lo
  ip router isis ISP
  ip address 10.255.0.4/32
@@ -42,28 +44,34 @@ route-map ACCEPT permit 10
 exit
 !
 router bgp 64000
- neighbor 10.100.0.1 remote-as 64004
- neighbor 10.100.1.1 remote-as 64005
  neighbor fc00::20 remote-as 64000
  neighbor fc00::20 update-source lo
  neighbor fc00::20 next-hop-self
  !
  address-family ipv4 unicast
-  neighbor 10.100.0.1 route-map ACCEPT in
-  neighbor 10.100.0.1 route-map ACCEPT out
-  neighbor 10.100.1.1 route-map ACCEPT in
-  neighbor 10.100.1.1 route-map ACCEPT out
   network 10.255.0.0/16
  exit-address-family
 exit
 !
 router bgp 64000 vrf Red
+ neighbor 10.100.0.1 remote-as 64004
+ !
  address-family ipv4 unicast
-  redistribute connected
-  rt vpn both 64000:2
-  rd vpn export 64000:2
-  export vpn
-  import vpn
+  neighbor 10.100.0.1 route-map ACCEPT in
+  neighbor 10.100.0.1 route-map ACCEPT out
+  network 10.255.0.0/16
+  import vrf default
+ exit-address-family
+exit
+!
+router bgp 64000 vrf Blue
+ neighbor 10.100.1.1 remote-as 64005
+ !
+ address-family ipv4 unicast
+  neighbor 10.100.1.1 route-map ACCEPT in
+  neighbor 10.100.1.1 route-map ACCEPT out
+  network 10.255.0.0/16
+  import vrf default
  exit-address-family
 exit
 !

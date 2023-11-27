@@ -1,0 +1,1 @@
+ip -6 route add fc00::5/128 encap seg6 mode inline segs fc00:4:: dev eth3
