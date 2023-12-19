@@ -16,6 +16,6 @@ show bgp all
 show bgp summary
 ```
 
-## Carefull RR
+## Careful RR
 
 The command `neighbor PEER route-reflector-client` should be done in the RR server, not inside client
