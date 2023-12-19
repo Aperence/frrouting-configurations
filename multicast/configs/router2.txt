@@ -1,0 +1,65 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname router2
+ip forwarding
+ipv6 forwarding
+ip pim rp 10.0.0.1 232.0.0.0/8
+ip pim spt-switchover infinity-and-beyond
+!
+interface lo
+ ipv6 router isis 1
+ ipv6 address fc00::2/128
+ ip router isis 1
+ ip address 10.0.0.2/32
+ ip pim
+ ip igmp  
+exit
+!
+interface eth1
+ ip router isis 1
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+ ip address 10.1.2.2/24
+ ip pim
+ ip igmp  
+exit
+!
+interface eth2
+ ip router isis 1
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+ ip address 10.2.3.1/24
+ ip pim
+ ip igmp  
+exit
+!
+interface eth3
+ ip router isis 1
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+ ip address 10.2.4.1/24
+ ip pim
+ ip igmp  
+exit
+!
+interface eth4
+ ip router isis 1
+ ipv6 router isis 1
+ isis metric 1
+ isis network point-to-point
+ ip address 10.2.5.1/24
+ ip pim
+ ip igmp  
+exit
+!
+router isis 1
+ is-type level-1
+ net 49.0000.0000.0000.0002.00
+ !
+exit
+!
+end
