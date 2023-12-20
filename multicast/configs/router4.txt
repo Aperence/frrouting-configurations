@@ -4,8 +4,7 @@ frr defaults traditional
 hostname router4
 ip forwarding
 ipv6 forwarding
-ip pim rp 10.0.0.1 232.0.0.0/8
-ip pim spt-switchover infinity-and-beyond
+ip pim rp 10.0.0.1 237.0.0.0/24
 !
 interface lo
  ipv6 router isis 1
@@ -13,7 +12,6 @@ interface lo
  ip router isis 1
  ip address 10.0.0.4/32
  ip pim
- ip igmp  
 exit
 !
 interface eth1
@@ -23,7 +21,15 @@ interface eth1
  isis network point-to-point
  ip address 10.2.4.2/24
  ip pim
- ip igmp  
+exit
+!
+interface host
+ ip pim
+ ip igmp
+ ip router isis 1
+ isis metric 1
+ isis network point-to-point
+ ip address 10.1.0.100/24
 exit
 !
 router isis 1

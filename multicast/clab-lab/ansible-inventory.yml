@@ -7,15 +7,21 @@ all:
   children:
     linux:
       hosts:
+        clab-lab-r1:
+          ansible_host: 172.20.20.8
+        clab-lab-r2:
+          ansible_host: 172.20.20.7
         clab-lab-router1:
           ansible_host: 172.20.20.4
         clab-lab-router2:
-          ansible_host: 172.20.20.2
+          ansible_host: 172.20.20.3
         clab-lab-router3:
-          ansible_host: 172.20.20.6
+          ansible_host: 172.20.20.2
         clab-lab-router4:
-          ansible_host: 172.20.20.7
+          ansible_host: 172.20.20.9
         clab-lab-router5:
           ansible_host: 172.20.20.5
         clab-lab-router6:
-          ansible_host: 172.20.20.3
+          ansible_host: 172.20.20.10
+        clab-lab-s1:
+          ansible_host: 172.20.20.6
