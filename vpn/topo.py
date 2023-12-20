@@ -7,6 +7,7 @@ parser.add_argument("--isis", action="store_true", help="Create IS-IS config")
 parser.add_argument("--bgp", action="store_true", help="Create basic BGP config")
 parser.add_argument("--rr", action="store_true", help="Create route reflector config")
 parser.add_argument("--sr", action="store_true", help="Create segment routing config")
+parser.add_argument("--srv6", action="store_true", help="Create segment routing v6 config")
 
 args = parser.parse_args()
 
@@ -26,6 +27,8 @@ elif (args.rr):
     replace = "03-configs-rr/"
 elif (args.sr):
     replace = "04-configs-sr/"
+elif (args.srv6):
+    replace = "04b-configs-srv6/"
 
 text = re.sub(pattern, replace, text)
 

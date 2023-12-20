@@ -1,0 +1,57 @@
+!
+frr version 9.2-dev
+frr defaults traditional
+hostname p1
+!
+segment-routing
+ srv6
+  locators
+   locator loc20
+    prefix fc00:20::/48
+   exit
+   !
+  exit
+  !
+ exit
+ !
+exit
+!
+interface lo
+ ip router isis ISP
+ ip address 10.255.0.20/32
+ ipv6 router isis ISP
+ ipv6 address fc00::20/128
+exit
+!
+interface eth1
+ ipv6 router isis ISP
+ ip router isis ISP
+ ip address 10.105.0.2/24
+ isis network point-to-point
+exit
+!
+router isis ISP
+ is-type level-1
+ net 49.0000.0000.0000.0020.00
+ segment-routing srv6
+  locator loc20
+ exit
+exit
+!
+router bgp 64000
+ neighbor fc00::1 remote-as 64000
+ neighbor fc00::2 remote-as 64000
+ neighbor fc00::3 remote-as 64000
+ neighbor fc00::4 remote-as 64000
+ neighbor fc00::1 route-reflector-client
+ neighbor fc00::2 route-reflector-client
+ neighbor fc00::3 route-reflector-client
+ neighbor fc00::4 route-reflector-client
+ !
+ address-family ipv4 unicast
+  redistribute connected
+ exit-address-family
+ !
+exit
+!
+end
