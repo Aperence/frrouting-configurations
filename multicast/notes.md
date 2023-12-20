@@ -11,7 +11,7 @@ smcroute -j eth1 237.0.0.10
 On router 4, we can prevent receiver 1 from sending multicast packets by using :
 
 ```
-iptables -i host -A INPUT -s HOST_ADRESS -d GROUP_ADRESS -j DROP
+iptables -i host -A FORWARD -d 237.0.0.10 -j DROP
 ```
 
 ## Send multicast packets
