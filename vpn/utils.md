@@ -10,10 +10,22 @@ traceroute 10.4.0.1 -s 10.1.0.1
 show bgp all
 ```
 
+## Show bgp routes for ipv4
+
+```
+show bgp ipv4 
+```
+
 ## Show bgp sessions
 
 ```
 show bgp summary
+```
+
+## Show bgp vpn
+
+```
+show bgp ipv4 vpn 
 ```
 
 ## Careful RR

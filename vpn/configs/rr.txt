@@ -38,6 +38,9 @@ router bgp 64000
  !
  address-family ipv4 unicast
   redistribute connected
+  rt vpn import 10.255.255.1:1 10.255.255.1:2
+  export vpn
+  import vpn
  exit-address-family
  !
 exit

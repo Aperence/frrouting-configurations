@@ -49,29 +49,38 @@ router bgp 64000
  neighbor fc00::20 next-hop-self
  !
  address-family ipv4 unicast
-  network 10.255.0.0/16
+  rt vpn import 10.255.255.1:1 10.255.255.1:2
+  import vpn
+  export vpn
+  network 10.255.0.0/16  
  exit-address-family
 exit
 !
 router bgp 64000 vrf Red
+ bgp router-id 10.255.255.1
  neighbor 10.100.0.1 remote-as 64004
- !
  address-family ipv4 unicast
   neighbor 10.100.0.1 route-map ACCEPT in
   neighbor 10.100.0.1 route-map ACCEPT out
-  network 10.255.0.0/16
-  import vrf default
+  rt vpn both 10.255.255.1:2
+  rd vpn export 10.255.255.1:2
+  redistribute connected
+  export vpn
+  import vpn
  exit-address-family
 exit
 !
 router bgp 64000 vrf Blue
+ bgp router-id 10.255.255.1
  neighbor 10.100.1.1 remote-as 64005
- !
  address-family ipv4 unicast
   neighbor 10.100.1.1 route-map ACCEPT in
   neighbor 10.100.1.1 route-map ACCEPT out
-  network 10.255.0.0/16
-  import vrf default
+  redistribute connected
+  rt vpn both 10.255.255.1:1
+  rd vpn export 10.255.255.1:1
+  import vpn
+  export vpn
  exit-address-family
 exit
 !
