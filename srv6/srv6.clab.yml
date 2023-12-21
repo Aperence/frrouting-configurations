@@ -5,46 +5,51 @@ topology:
       binds:
       - configs/router1.txt:/conf.txt
       - configs/setup-router1.sh:/setup.sh
+      - frr_conf:/etc/frr/daemons
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1
+      image: frr_tcpdump
       kind: linux
     router2:
       binds:
       - configs/router2.txt:/conf.txt
       - configs/setup-router2.sh:/setup.sh
+      - frr_conf:/etc/frr/daemons
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1
+      image: frr_tcpdump
       kind: linux
     router3:
       binds:
       - configs/router3.txt:/conf.txt
       - configs/setup-router3.sh:/setup.sh
+      - frr_conf:/etc/frr/daemons
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1
+      image: frr_tcpdump
       kind: linux
     router4:
       binds:
       - configs/router4.txt:/conf.txt
       - configs/setup-router4.sh:/setup.sh
+      - frr_conf:/etc/frr/daemons
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1
+      image: frr_tcpdump
       kind: linux
     router5:
       binds:
       - configs/router5.txt:/conf.txt
       - configs/setup-router5.sh:/setup.sh
+      - frr_conf:/etc/frr/daemons
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: registry.forge.uclouvain.be/linfo2142/containers/frr:v0.1
+      image: frr_tcpdump
       kind: linux
   links:
     - endpoints:
@@ -54,14 +59,14 @@ topology:
       - router2:eth2
       - router5:eth1
     - endpoints:
-      - router3:eth2
+      - router3:eth1
       - router5:eth2
     - endpoints:
-      - router4:eth2
+      - router4:eth1
       - router5:eth3
     - endpoints:
       - router2:eth3
-      - router3:eth3
+      - router3:eth2
     - endpoints:
-      - router3:eth4
-      - router4:eth3
+      - router3:eth3
+      - router4:eth2

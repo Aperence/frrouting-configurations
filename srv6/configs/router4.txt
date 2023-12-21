@@ -8,7 +8,7 @@ segment-routing
  srv6
   locators
    locator loc4
-    prefix fc00:4::/48
+    prefix fc00:4::/32
    exit
    !
   exit
@@ -20,15 +20,21 @@ exit
 interface lo
  ipv6 router isis 1
  ipv6 address fc00::4/128
+ ip router isis 1
+ ip address 10.0.0.4/32
 exit
 !
-interface eth2
+interface eth1
+ ip router isis 1
+ ip address 10.4.5.1/24
  ipv6 router isis 1
  isis metric 2
  isis network point-to-point
 exit
 !
-interface eth3
+interface eth2
+ ip router isis 1
+ ip address 10.3.4.2/24
  ipv6 router isis 1
  isis metric 1
  isis network point-to-point

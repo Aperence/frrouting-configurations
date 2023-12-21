@@ -1,5 +1,5 @@
 #!/bin/sh
-lab_name=lab
+lab_name=vpn-lab
 
 name=$1
 itf=$2

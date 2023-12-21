@@ -18,6 +18,25 @@ sysctl net.ipv6.conf.eth1.seg6_enabled=1
 sysctl net.ipv6.conf.eth2.seg6_enabled=1
 
 
+if [ $(hostname) != "pe1" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.1/32 encap seg6 mode encap segs fc00:1:: dev lo
+fi
+if [ $(hostname) != "pe2" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.2/32 encap seg6 mode encap segs fc00:2:: dev lo
+fi
+if [ $(hostname) != "pe3" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.3/32 encap seg6 mode encap segs fc00:3:: dev lo
+fi
+if [ $(hostname) != "pe4" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.4/32 encap seg6 mode encap segs fc00:4:: dev lo
+fi
+if [ $(hostname) != "p1" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.10/32 encap seg6 mode encap segs fc00:10:: dev lo
+fi
+if [ $(hostname) != "rr" ] && [$(hostname | head -c 2) != "ce"]; then
+    ip route add 10.255.0.20/32 encap seg6 mode encap segs fc00:20:: dev lo
+fi
+
 if [ -n "$(ip addr | grep eth3)" ]; then
     sysctl net.mpls.conf.eth3.input=1
     sysctl net.ipv6.conf.eth3.seg6_enabled=1
