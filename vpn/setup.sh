@@ -68,7 +68,7 @@ if [ -n "$(ip addr | grep eth5)" ]; then
     sysctl net.mpls.conf.eth5.input=1
     sysctl net.ipv6.conf.eth5.seg6_enabled=1
 fi
-if [ "$(hostname)" == "pe1" ] || [ "$(hostname)" == "pe3" ] || [ "$(hostname)" == "pe4" ]; then
+if [ "$(hostname)" == "pe1" ] || [ "$(hostname)" == "pe2" ] || [ "$(hostname)" == "pe4" ]; then
     printf "\033[0;34m"
     echo "Adding vrf Blue"
     ip link add Blue type vrf table 5
@@ -79,7 +79,7 @@ if [ "$(hostname)" == "pe1" ] || [ "$(hostname)" == "pe3" ] || [ "$(hostname)" =
     ip addr add 10.255.255.2 dev vrfDummy
     ip link set dev vrfDummy master Blue
 fi
-if [ "$(hostname)" == "pe2" ] || [ "$(hostname)" == "pe4" ]; then
+if [ "$(hostname)" == "pe3" ] || [ "$(hostname)" == "pe4" ]; then
     printf "\033[0;31m"
     echo "Adding vrf Red"
     ip link add Red type vrf table 10
@@ -90,11 +90,11 @@ if [ "$(hostname)" == "pe2" ] || [ "$(hostname)" == "pe4" ]; then
     ip addr add 10.255.255.2 dev vrfDummy
     ip link set dev vrfDummy master Red
 fi
-if [ "$(hostname)" == "pe1" ] || [ "$(hostname)" == "pe3" ]; then 
+if [ "$(hostname)" == "pe1" ] || [ "$(hostname)" == "pe2" ]; then 
     # set this interface as slave of vrf Blue
     ip link set dev eth1 master Blue
 fi
-if [ "$(hostname)" == "pe2" ]; then
+if [ "$(hostname)" == "pe3" ]; then
     # set this interface as slave of vrf Red
     ip link set dev eth1 master Red
 fi

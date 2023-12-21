@@ -44,19 +44,21 @@ router bgp 64000
  !
  address-family ipv4 unicast
   network 10.255.0.0/16
-  rt vpn import 10.255.255.1:2
+  rt vpn import 10.255.255.1:1
+  rt vpn export 0.0.0.0:1
+  rd vpn export 0.0.0.0:1
   import vpn
   export vpn
  exit-address-family
 exit
 !
-router bgp 64000 vrf Red
+router bgp 64000 vrf Blue
  bgp router-id 10.255.255.1
  neighbor 10.100.0.1 remote-as 64002
  address-family ipv4 unicast
   redistribute connected
-  rt vpn both 10.255.255.1:2
-  rd vpn export 10.255.255.1:2
+  rt vpn both 10.255.255.1:1
+  rd vpn export 10.255.255.1:1
   import vpn
   export vpn
   neighbor 10.100.0.1 route-map ACCEPT in

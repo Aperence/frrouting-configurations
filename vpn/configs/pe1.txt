@@ -36,6 +36,8 @@ router bgp 64000
  address-family ipv4 unicast
   network 10.255.0.0/16
   rt vpn import 10.255.255.1:1
+  rt vpn export 0.0.0.0:1
+  rd vpn export 0.0.0.0:1
   import vpn
   export vpn
  exit-address-family
