@@ -7,7 +7,7 @@ segment-routing
  srv6
   locators
    locator loc2
-    prefix fc00:2::/48
+    prefix fc00:2::/32
    exit
    !
   exit
@@ -55,6 +55,7 @@ router bgp 64000
  segment-routing srv6
   locator loc2
  exit
+ segment-routing on
  !
  address-family ipv4 unicast
   neighbor 10.100.0.1 route-map ACCEPT in

@@ -7,7 +7,7 @@ segment-routing
  srv6
   locators
    locator loc20
-    prefix fc00:20::/48
+    prefix fc00:20::/32
    exit
    !
   exit

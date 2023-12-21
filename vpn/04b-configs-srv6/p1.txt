@@ -7,7 +7,7 @@ segment-routing
  srv6
   locators
    locator loc10
-    prefix fc00:10::/48
+    prefix fc00:10::/32
    exit
    !
   exit
@@ -64,6 +64,7 @@ router isis ISP
  segment-routing srv6
   locator loc10
  exit
+ segment-routing on
 exit
 !
 end
