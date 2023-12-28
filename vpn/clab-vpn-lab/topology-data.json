@@ -6,7 +6,7 @@
       "prefix": "clab",
       "mgmt": {
         "network": "clab",
-        "bridge": "br-f23c5455517a",
+        "bridge": "br-9986610d8a4e",
         "ipv4-subnet": "172.20.20.0/24",
         "ipv4-gw": "172.20.20.1",
         "ipv6-subnet": "2001:172:20:20::/64",
@@ -25,16 +25,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-1",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-address": "172.20.20.4",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::7",
+      "mgmt-ipv6-address": "2001:172:20:20::4",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-1",
@@ -54,16 +54,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-2",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.11",
+      "mgmt-ipv4-address": "172.20.20.5",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::b",
+      "mgmt-ipv6-address": "2001:172:20:20::5",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-2",
@@ -83,16 +83,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-3",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-address": "172.20.20.2",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::5",
+      "mgmt-ipv6-address": "2001:172:20:20::2",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce1-3",
@@ -112,16 +112,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce2-1",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-address": "172.20.20.12",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::3",
+      "mgmt-ipv6-address": "2001:172:20:20::c",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce2-1",
@@ -141,16 +141,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce2-2",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.8",
+      "mgmt-ipv4-address": "172.20.20.11",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::8",
+      "mgmt-ipv6-address": "2001:172:20:20::b",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/ce2-2",
@@ -170,16 +170,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/p1",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.10",
+      "mgmt-ipv4-address": "172.20.20.9",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::a",
+      "mgmt-ipv6-address": "2001:172:20:20::9",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/p1",
@@ -199,7 +199,7 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe1",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
       "mgmt-ipv4-address": "172.20.20.6",
@@ -208,7 +208,7 @@
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe1",
@@ -228,16 +228,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe2",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.12",
+      "mgmt-ipv4-address": "172.20.20.8",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::c",
+      "mgmt-ipv6-address": "2001:172:20:20::8",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe2",
@@ -257,16 +257,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe3",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.9",
+      "mgmt-ipv4-address": "172.20.20.7",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::9",
+      "mgmt-ipv6-address": "2001:172:20:20::7",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe3",
@@ -286,16 +286,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe4",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-address": "172.20.20.3",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::4",
+      "mgmt-ipv6-address": "2001:172:20:20::3",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/pe4",
@@ -315,16 +315,16 @@
       "group": "",
       "labdir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/rr",
       "kind": "linux",
-      "image": "frrouting/frr",
+      "image": "frr_tcpdump",
       "mgmt-net": "",
       "mgmt-intf": "",
-      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-address": "172.20.20.10",
       "mgmt-ipv4-prefix-length": 24,
-      "mgmt-ipv6-address": "2001:172:20:20::2",
+      "mgmt-ipv6-address": "2001:172:20:20::a",
       "mgmt-ipv6-prefix-length": 64,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-f23c5455517a",
+        "clab-mgmt-net-bridge": "br-9986610d8a4e",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/aperence/Documents/master/m1/reseau2/frrouting-configuration/vpn/clab-vpn-lab/rr",
@@ -342,13 +342,13 @@
       "a": {
         "node": "ce1-1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:2f:a9:40",
+        "mac": "aa:c1:ab:b0:10:23",
         "peer": "z"
       },
       "z": {
         "node": "pe1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:d5:b5:f5",
+        "mac": "aa:c1:ab:95:6f:e1",
         "peer": "a"
       }
     },
@@ -356,13 +356,13 @@
       "a": {
         "node": "ce1-2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:38:27:a4",
+        "mac": "aa:c1:ab:82:4a:46",
         "peer": "z"
       },
       "z": {
         "node": "pe2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:3b:dd:ce",
+        "mac": "aa:c1:ab:a1:89:1f",
         "peer": "a"
       }
     },
@@ -370,13 +370,13 @@
       "a": {
         "node": "ce2-1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:99:7a:80",
+        "mac": "aa:c1:ab:2d:49:0e",
         "peer": "z"
       },
       "z": {
         "node": "pe3",
         "interface": "eth1",
-        "mac": "aa:c1:ab:58:f7:eb",
+        "mac": "aa:c1:ab:7d:49:80",
         "peer": "a"
       }
     },
@@ -384,13 +384,13 @@
       "a": {
         "node": "ce2-2",
         "interface": "eth1",
-        "mac": "aa:c1:ab:4f:84:6b",
+        "mac": "aa:c1:ab:49:a9:19",
         "peer": "z"
       },
       "z": {
         "node": "pe4",
         "interface": "eth1",
-        "mac": "aa:c1:ab:4e:bb:6f",
+        "mac": "aa:c1:ab:16:f3:1e",
         "peer": "a"
       }
     },
@@ -398,13 +398,13 @@
       "a": {
         "node": "pe1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:cd:99:31",
+        "mac": "aa:c1:ab:c9:8d:6b",
         "peer": "z"
       },
       "z": {
         "node": "p1",
         "interface": "eth1",
-        "mac": "aa:c1:ab:66:8d:cd",
+        "mac": "aa:c1:ab:1e:60:03",
         "peer": "a"
       }
     },
@@ -412,13 +412,13 @@
       "a": {
         "node": "pe2",
         "interface": "eth2",
-        "mac": "aa:c1:ab:5c:29:9c",
+        "mac": "aa:c1:ab:f2:17:80",
         "peer": "z"
       },
       "z": {
         "node": "p1",
         "interface": "eth2",
-        "mac": "aa:c1:ab:80:06:68",
+        "mac": "aa:c1:ab:16:8e:f8",
         "peer": "a"
       }
     },
@@ -426,13 +426,13 @@
       "a": {
         "node": "pe3",
         "interface": "eth2",
-        "mac": "aa:c1:ab:b4:f2:6d",
+        "mac": "aa:c1:ab:b6:4e:50",
         "peer": "z"
       },
       "z": {
         "node": "p1",
         "interface": "eth3",
-        "mac": "aa:c1:ab:6a:3a:10",
+        "mac": "aa:c1:ab:17:9a:83",
         "peer": "a"
       }
     },
@@ -440,13 +440,13 @@
       "a": {
         "node": "pe4",
         "interface": "eth2",
-        "mac": "aa:c1:ab:09:79:ce",
+        "mac": "aa:c1:ab:b3:ac:19",
         "peer": "z"
       },
       "z": {
         "node": "p1",
         "interface": "eth4",
-        "mac": "aa:c1:ab:fb:da:82",
+        "mac": "aa:c1:ab:8e:b7:df",
         "peer": "a"
       }
     },
@@ -454,13 +454,13 @@
       "a": {
         "node": "rr",
         "interface": "eth1",
-        "mac": "aa:c1:ab:3c:89:7c",
+        "mac": "aa:c1:ab:a9:35:85",
         "peer": "z"
       },
       "z": {
         "node": "p1",
         "interface": "eth5",
-        "mac": "aa:c1:ab:4d:78:00",
+        "mac": "aa:c1:ab:65:bb:b6",
         "peer": "a"
       }
     },
@@ -468,13 +468,13 @@
       "a": {
         "node": "ce1-3",
         "interface": "eth1",
-        "mac": "aa:c1:ab:47:24:4b",
+        "mac": "aa:c1:ab:de:71:1b",
         "peer": "z"
       },
       "z": {
         "node": "pe4",
         "interface": "eth3",
-        "mac": "aa:c1:ab:20:ba:12",
+        "mac": "aa:c1:ab:e1:24:8c",
         "peer": "a"
       }
     }

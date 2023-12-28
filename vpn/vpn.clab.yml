@@ -5,121 +5,132 @@ topology:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/ce1-1.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/ce1-1.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     ce1-2:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/ce1-2.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/ce1-2.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     ce2-1:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/ce2-1.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/ce2-1.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     ce2-2:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/ce2-2.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/ce2-2.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     ce1-3:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/ce1-3.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/ce1-3.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     pe1:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/pe1.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/pe1.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     pe2:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/pe2.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/pe2.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     pe3:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/pe3.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/pe3.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     pe4:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/pe4.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/pe4.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     p1:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/p1.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/p1.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
     rr:
       binds:
       - frr_conf:/etc/frr/daemons
       - configs/rr.txt:/conf.txt
-      - setup.sh:/setup.sh
+      - configs/rr.sh:/setup.sh
+       
       exec:
       - chmod +x setup.sh
       - sh ./setup.sh
-      image: frrouting/frr
+      image: frr_tcpdump
       kind: linux
 
   links:
