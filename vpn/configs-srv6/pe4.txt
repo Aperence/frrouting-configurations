@@ -3,20 +3,11 @@ frr version 9.2-dev
 frr defaults traditional
 hostname pe4
 !
-segment-routing
- srv6
-  locators
-   locator loc4
-    prefix fc00:4::/32
-   exit
-   !
-  exit
-  !
- exit
- !
-exit
-!
 ip route 10.255.0.0/16 Null0
+!
+vrf Red
+!
+vrf Blue
 !
 interface lo
  ip router isis ISP
@@ -43,31 +34,56 @@ exit
 router isis ISP
  is-type level-1
  net 49.0000.0000.0000.0004.00
- segment-routing srv6
-  locator loc4
- exit
+ segment-routing on
+ segment-routing node-msd 8
+ segment-routing prefix fc00::4/128 index 4
+ segment-routing prefix 10.255.0.4/32 index 104
 exit
 !
 route-map ACCEPT permit 10
 exit
 !
 router bgp 64000
- neighbor 10.100.0.1 remote-as 64004
- neighbor 10.100.1.1 remote-as 64005
  neighbor fc00::20 remote-as 64000
  neighbor fc00::20 update-source lo
  neighbor fc00::20 next-hop-self
- segment-routing srv6
-  locator loc4
- exit
  !
  address-family ipv4 unicast
-  sid vpn export auto
+  redistribute connected
+  rt vpn import 10.255.255.1:1 10.255.255.1:2
+  rt vpn export 0.0.0.0:1
+  rd vpn export 0.0.0.0:1
+  import vpn
+  export vpn
+  network 10.255.0.0/16  
+ exit-address-family
+exit
+!
+router bgp 64000 vrf Red
+ bgp router-id 10.255.255.1
+ neighbor 10.100.0.1 remote-as 64004
+ address-family ipv4 unicast
   neighbor 10.100.0.1 route-map ACCEPT in
   neighbor 10.100.0.1 route-map ACCEPT out
+  rt vpn both 10.255.255.1:2
+  rd vpn export 10.255.255.1:2
+  redistribute connected
+  export vpn
+  import vpn
+ exit-address-family
+exit
+!
+router bgp 64000 vrf Blue
+ bgp router-id 10.255.255.1
+ neighbor 10.100.1.1 remote-as 64005
+ address-family ipv4 unicast
   neighbor 10.100.1.1 route-map ACCEPT in
   neighbor 10.100.1.1 route-map ACCEPT out
-  network 10.255.0.0/16
+  redistribute connected
+  rt vpn both 10.255.255.1:1
+  rd vpn export 10.255.255.1:1
+  import vpn
+  export vpn
  exit-address-family
 exit
 !
