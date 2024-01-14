@@ -46,9 +46,12 @@ router bgp 64000
   network 10.255.0.0/16
   rt vpn import 10.255.255.1:1
   rt vpn export 0.0.0.0:1
-  rd vpn export 0.0.0.0:1
+  rd vpn export 0.0.0.0:2
   import vpn
   export vpn
+ exit-address-family
+ address-family ipv4 vpn
+  neighbor fc00::20 activate
  exit-address-family
 exit
 !
